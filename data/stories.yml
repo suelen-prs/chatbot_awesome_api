@@ -14,5 +14,3 @@ stories:
   steps:
   - intent: cotacao
   - action: utter_qual_moeda
-  - intent: moeda_comparacao
-  - action: utter_confirmar_moeda

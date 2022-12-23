@@ -23,6 +23,11 @@ slots:
       - type: from_entity
         entity: moeda
 
+forms:
+  moeda_form:
+    required_slots:
+      - moeda
+
 responses:
 
   utter_iniciar:
@@ -40,6 +45,18 @@ responses:
 
   utter_confirmar_moeda:
   - text: "{nome}, confirmando moeda: {moeda}"
+
+  utter_confirma:
+  - text: "mensagem aleatoria"
+
+actions:
+  - utter_iniciar
+  - utter_pergunta_nome
+  - utter_como_posso_ajudar
+  - utter_qual_moeda
+  - utter_confirma_moeda
+  - utter_confirma
+  - moeda_form
 
 session_config:
   session_expiration_time: 60

@@ -2,12 +2,18 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Ativando Form Moeda
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: moeda_comparacao
+  - action: moeda_form
+  - active_loop: moeda_form
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Submetendo Form Moeda
+  condition:
+  - active_loop: moeda_form
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - action: moeda_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: moeda_form

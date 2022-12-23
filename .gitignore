@@ -9,3 +9,4 @@ venv.bak/
 pycache/
 models/
 bot/actions/__pycache__/
+results/
