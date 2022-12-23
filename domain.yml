@@ -1,0 +1,46 @@
+version: "3.1"
+
+intents:
+  - comprimentar
+  - identificar
+  - cotacao
+  - moeda_comparacao
+
+entities:
+  - nome
+  - moeda
+
+slots:
+  nome:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: nome
+
+  moeda:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: moeda
+
+responses:
+
+  utter_iniciar:
+  - text: "Bem vindo(a)"
+  
+  utter_pergunta_nome:
+  - text: "Qual seu nome?"
+  - text: "Como você se chama?"
+
+  utter_como_posso_ajudar:
+  - text: "{nome}, como posso te ajudar?"
+
+  utter_qual_moeda:
+  - text: "Claro {nome}, pode me informar a sigla oficial da moeda?"
+
+  utter_confirmar_moeda:
+  - text: "{nome}, confirmando moeda: {moeda}"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

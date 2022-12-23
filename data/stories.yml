@@ -1,0 +1,18 @@
+version: "3.1"
+
+stories:
+
+- story: inicia_conversa
+  steps:
+  - intent: comprimentar
+  - action: utter_pergunta_nome
+  - intent: identificar
+  - action: utter_iniciar
+  - action: utter_como_posso_ajudar
+
+- story: pergunta_cotação
+  steps:
+  - intent: cotacao
+  - action: utter_qual_moeda
+  - intent: moeda_comparacao
+  - action: utter_confirmar_moeda

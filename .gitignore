@@ -1,0 +1,11 @@
+models/*
+.rasa/
+.env
+.venv
+venv/
+ENV/
+env.bak/
+venv.bak/
+pycache/
+models/
+bot/actions/__pycache__/

@@ -1,0 +1,35 @@
+version: "3.1"
+
+nlu:
+
+- intent: comprimentar
+  examples: |
+    - Olá
+    - Oi
+    - Bom dia
+    - Boa noite
+
+- intent: identificar
+  examples: |
+    - Meu nome é [Suelen](nome)
+    - Eu sou [Vanessa](nome)
+    - Me chamo (Caroline)(nome)
+    - [José](nome)
+    - [Henrique](nome)
+
+- intent: cotacao
+  examples: |
+    - Gostaria de ver uma cotacao
+    - Quero ver a cotacao de uma moeda
+    - Quanto está a cotacao hoje
+    - Me informa a cotacao de hoje
+
+- intent: moeda_comparacao
+  examples: |
+    - Queria ver o dollar, [USD](moeda)
+    - [EUR](moeda)
+    - A sigla oficial do Real Comercial é [BRLT](moeda)
+    - Gostaria de comparar com o Peso Colombiano [COP](moeda)
+    - Peso argentino [ARS](moeda), por favor
+    - [AUD](moeda)
+    - [BTC](moeda)
