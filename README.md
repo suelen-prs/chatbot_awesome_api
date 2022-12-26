@@ -1,7 +1,4 @@
 # Acessando AwesomeAPI utilizando RASA
-##
-##
-##
 
 
 [![N|Solid](https://1805791138-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/spaces%2F-LDDJfbHDy3v965nUzNO%2Favatar.png?generation=1527103896608667&alt=media)](https://docs.awesomeapi.com.br/api-de-moedas) [![Build Status](https://goodhere.org/static/e4cde8fd927f0fae9e434da6fa030752/91bed/mfehiczg1xpug7tkkeue.png)](https://rasa.com/)
