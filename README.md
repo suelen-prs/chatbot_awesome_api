@@ -17,8 +17,8 @@ Requer Python 3.8.13 e RASA 3 instalados na máquina.
 Links com tutorial de instalação:
 | Plugin | Links |
 | ------ | ------ |
-| Python | [https://www.python.org/downloads/][PlDb] |
-| RASA | [https://www.youtube.com/watch?v=tXiYJM2vGJk&t=288s][PlGh] |
+| Python | [https://www.python.org/downloads/] |
+| RASA | [https://www.youtube.com/watch?v=tXiYJM2vGJk&t=288s] |
 
 Faça o clone do projeto:
 
