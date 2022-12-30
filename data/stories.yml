@@ -14,3 +14,22 @@ stories:
   steps:
   - intent: cotacao
   - action: utter_qual_moeda
+
+- story: nova_cotacao
+  steps:
+  - intent: agradecer
+  - action: utter_nova_moeda
+  - intent: afirmar
+  - action: utter_qual_moeda
+  
+- story: terminar
+  steps:
+  - intent: agradecer
+  - action: utter_nova_moeda
+  - intent: negar
+  - action: utter_agradecer_e_finalizar
+  
+  
+
+
+

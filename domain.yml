@@ -5,6 +5,9 @@ intents:
   - identificar
   - cotacao
   - moeda_comparacao
+  - afirmar
+  - negar
+  - agradecer
 
 entities:
   - nome
@@ -41,13 +44,27 @@ responses:
   - text: "{nome}, como posso te ajudar?"
 
   utter_qual_moeda:
-  - text: "Claro {nome}, pode me informar a sigla oficial da moeda?"
+  - text: "Claro {nome}, pode me informar a sigla oficial da moeda?
+
+
+            Algumas sugestões:
+
+            USD - Dólar Americano
+
+            EUR - Euro
+
+            ARS - Peso Argentino
+            
+            BTC - BitCoin"
 
   utter_confirmar_moeda:
   - text: "{nome}, confirmando moeda: {moeda}"
 
-  utter_confirma:
-  - text: "mensagem aleatoria"
+  utter_nova_moeda:
+  - text: "Gostaria de ver uma nova moeda?"
+
+  utter_agradecer_e_finalizar:
+  - text: "Obrigado(a) {nome}, até mais!"
 
 actions:
   - utter_iniciar
@@ -55,8 +72,9 @@ actions:
   - utter_como_posso_ajudar
   - utter_qual_moeda
   - utter_confirma_moeda
-  - utter_confirma
+  - utter_nova_moeda
   - moeda_form
+  - utter_agradecer_e_finalizar
 
 session_config:
   session_expiration_time: 60

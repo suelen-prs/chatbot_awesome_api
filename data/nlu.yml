@@ -33,3 +33,25 @@ nlu:
     - Peso argentino [ARS](moeda), por favor
     - [AUD](moeda)
     - [BTC](moeda)
+
+- intent: afirmar
+  examples: |
+    - Sim
+    - Com certeza
+    - Gostaria
+    - Claro
+    - sim, obrigada!
+
+- intent: negar
+  examples: |
+    - Não
+    - não gostaria
+    - não quero mais nada
+    - não, obrigada!
+
+- intent: agradecer
+  examples: |
+    - Obrigada
+    - obrigado
+    - grato
+    - grata
