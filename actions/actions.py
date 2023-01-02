@@ -25,15 +25,18 @@ class ActionHelloWorld(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         moeda = tracker.get_slot("moeda")
-        url = f'https://economia.awesomeapi.com.br/json/last/BRL-{moeda}'
+        url = f'https://economia.awesomeapi.com.br/json/daily/{moeda}-BRL/1'
 
         json_data = requests.get(url).json()
-        nome_moeda = json_data.get('url')
+        nome_moeda = json_data[0].get('name')
+        valor_moeda_real = json_data[0].get('bid')
+
+        nome_oficial = nome_moeda.split('/')
 
         print(nome_moeda)
 
-        resp = f'moeda solicitada: {json_data}'
+        resp_valor = f'1 {nome_oficial[0]} equivale a R$ {valor_moeda_real} {nome_oficial[1]} hoje.'
 
-        dispatcher.utter_message(text=resp)
+        dispatcher.utter_message(text=resp_valor)
 
         return [SlotSet("moeda", url)]

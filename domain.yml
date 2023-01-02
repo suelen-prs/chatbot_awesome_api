@@ -55,7 +55,9 @@ responses:
 
             ARS - Peso Argentino
             
-            BTC - BitCoin"
+            AUD - Dóllar Australiano
+            
+            UYU - Peso Uruguaio"
 
   utter_confirmar_moeda:
   - text: "{nome}, confirmando moeda: {moeda}"
