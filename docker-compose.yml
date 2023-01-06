@@ -1,3 +1,5 @@
+
+
 version: "3.0"
 services:
   container-bot:
@@ -34,10 +36,10 @@ services:
 
   web:
     build:
-      context: ./page
+      context: ./webchat
       dockerfile: web.Dockerfile
-    image: page
-    container_name: page-app
+    image: webchat
+    container_name: webchat-app
     depends_on:
       - container-bot
     networks: 
