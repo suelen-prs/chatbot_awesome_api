@@ -34,10 +34,10 @@ services:
 
   web:
     build:
-      context: ./webchat
+      context: ./page
       dockerfile: web.Dockerfile
-    image: webchat
-    container_name: webchat-app
+    image: page
+    container_name: page-app
     depends_on:
       - container-bot
     networks: 
