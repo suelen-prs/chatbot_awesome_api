@@ -1,0 +1,50 @@
+version: "3.0"
+services:
+  container-bot:
+    build:
+      context: .
+      dockerfile: rasaDock.Dockerfile
+    networks:
+      - rasa-network
+    ports:
+      - 5005:5056
+    depends_on:
+      - container-server-bot
+    volumes:
+      - ./:/app
+    public: true
+    command:
+      - run
+      - --enable-api
+      - --cors
+      - "*"
+      - --debug
+      - -p 5056
+  container-server-bot:
+    build:
+      context: .
+      dockerfile: actionsRasa.Dockerfile
+    image: rasa-actions:latest
+    networks: 
+      - rasa-network
+    ports:
+      - 5055:5055
+    volumes:
+      - ./actions:/app/actions
+
+  web:
+    build:
+      context: ./webchat
+      dockerfile: web.Dockerfile
+    image: webchat
+    container_name: webchat-app
+    depends_on:
+      - container-bot
+    networks: 
+      - rasa-network
+    ports: 
+      - 8080:8080
+
+networks: 
+    rasa-network:
+        driver: bridge
