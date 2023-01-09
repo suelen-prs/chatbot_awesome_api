@@ -1,0 +1,26 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"moeda_comparacao\"}}]": "form_moeda",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"moeda_comparacao\"}}, {\"active_loop\": {\"name\": \"form_moeda\"}, \"prev_action\": {\"action_name\": \"form_moeda\"}, \"user\": {\"intent\": \"moeda_comparacao\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"form_moeda\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "form_moeda"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"form_moeda\"}, \"prev_action\": {\"action_name\": \"form_moeda\"}, \"user\": {\"intent\": \"moeda_comparacao\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"moeda_comparacao\"}}]",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"form_moeda\"}}]",
+      "handling active loops and forms - moeda_form",
+      "handling active loops and forms - moeda_form - action_listen",
+      "predicting default action with intent back",
+      "predicting default action with intent restart",
+      "handling active loops and forms - form_moeda - action_listen",
+      "predicting default action with intent session_start"
+    ]
+  }
+}

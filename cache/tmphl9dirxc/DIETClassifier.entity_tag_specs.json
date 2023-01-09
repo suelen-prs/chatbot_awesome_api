@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-moeda",
+      "2": "I-moeda",
+      "3": "L-moeda",
+      "4": "U-moeda",
+      "5": "B-nome",
+      "6": "I-nome",
+      "7": "L-nome",
+      "8": "U-nome",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-moeda": 1,
+      "I-moeda": 2,
+      "L-moeda": 3,
+      "U-moeda": 4,
+      "B-nome": 5,
+      "I-nome": 6,
+      "L-nome": 7,
+      "U-nome": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]
