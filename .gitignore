@@ -10,3 +10,4 @@ pycache/
 models/
 bot/actions/__pycache__/
 results/
+/keys.py
